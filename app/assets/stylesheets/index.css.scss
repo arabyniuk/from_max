@@ -1,3 +1,120 @@
 // Place all the styles related to the index controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@mixin wrapper($w) {
+	margin: 0 auto;
+	width: $w;	
+}
+
+@mixin bgGradient($color1, $color2) {
+	background: -moz-linear-gradient($color1, $color2); /* FF 3.6+ */  
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $color1), color-stop(100%, $color2)); /* Safari 4+, Chrome 2+ */  
+    background: -webkit-linear-gradient($color1, $color2); /* Safari 5.1+, Chrome 10+ */  
+    background: -o-linear-gradient($color1, $color2); /* Opera 11.10 */  
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$color1', endColorstr='$color2'); /* IE6 & IE7 */  
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='$color1', endColorstr='$color2')"; /* IE8+ */  
+    background: linear-gradient($color1, $color2); /* the standard */  
+}
+$footerHght: 234px;
+$wrapWidth: 975px;
+$width_2-5: 220px;
+
+body { 
+}
+.pull-right {
+	float: right;	
+}
+// *****************
+// 		HEADER
+// *****************
+
+header {
+	h1 {
+		float: left;
+	}
+	ul {
+		@include bgGradient(#fff, #b2c4d3);
+		border-radius: 10px;
+		border: 1px solid #fff;
+		font-family: 'PT Sans Narrow', sans-serif;
+		font-weight: 400;
+		list-style: none;	
+		padding: 15px;				
+		li {
+			display: inline-block;
+			padding: 10px 5px;
+			border-right: 1px solid #a3afb8;
+
+			a {
+				text-decoration: none;
+				color: #1b4d6f;
+				font-size: 18px;
+				text-shadow: 1px 0px 2px #1b4d6f, 1px 2px 5px #fff;
+				&:hover {
+					text-decoration:underline;
+				}
+			}						
+		}
+	}
+}
+section {
+	clear: left;
+}
+.wrap {
+	@include wrapper(975px);
+}
+.wrap_big {
+	@include wrapper(1250px);
+}
+.h-desc {
+	position: relative;	
+}
+.desc {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.row {
+	@include wrapper(975px);
+	display: table;	
+}
+.row [class*="span"] {
+	float: left;
+	display: block;
+	box-sizing: border-box;
+}
+.span2-5 {
+	width: $width_2-5;
+}	
+.span3 {
+	width: ($wrapWidth - $width_2-5)/3;
+}
+
+.span4 {
+	width: $wrapWidth / 3;
+}
+// *****************
+// 		FOOTER
+// *****************
+
+html,body {
+	height: 100%; 
+}
+.main {
+	@include bgGradient(#84a2b9, #fff);
+	min-height: 100%;
+}
+.hFooter { 
+	height: $footerHght; 
+}
+.footer {
+	background: #0000CC; 
+	color: #fff;
+	height: $footerHght; 
+	margin-top: -$footerHght; 
+}
+.footer {
+	height: $footerHght;
+	background: url(footer_bg.jpg) repeat-x;
+}

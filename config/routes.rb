@@ -1,5 +1,6 @@
 Misc2::Application.routes.draw do
-  get "index/show"
+  
+  root :to => 'index#show'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
