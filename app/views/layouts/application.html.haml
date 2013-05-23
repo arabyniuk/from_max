@@ -4,8 +4,12 @@
 	= stylesheet_link_tag    "application", :media => "all"
 	= javascript_include_tag "application"
 	= csrf_meta_tags
-	%link{:href=>'http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700',:rel=>'stylesheet', :type=>'text/css'}
 	%body
+		%div#parallax
+			%div{:style => "width: 1600px; height: 550px;"}
+				=image_tag("grass_1.png", :style => "position:absolute; top:0px; left:0px;" )
+			%div{:style => "width: 1600px; height: 550px;"}
+				=image_tag("grass_2.png", :style => "position:absolute; top:0px; right:0px;")
 		.main
 			.wrap
 				= render 'nav/header'

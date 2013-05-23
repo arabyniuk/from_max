@@ -1,24 +1,27 @@
 .row
-	%header
-		%h1 
-			= image_tag("logo.png")
-		%nav
-			%ul.pull-right 
+	%header	
+		%h1 		
+			%a{:href=>"/"}
+				= image_tag("logo.png", :alt=>"Misc")
+		%nav.nvg
+			%ul.hdr-lang.pull-right 
+				%li
+					%p
+						= link_to 'Ru', '/',:class => 'ru active' 
+					%p
+						= link_to 'En', '/',:class => 'en'									
+			%ul.hdr-menu.pull-right 
+				%li					
+					= link_to 'О компании'
 				%li 
-					= link_to 'O kompanii'
+					= link_to 'Услуги'
 				%li 
-					= link_to 'Uslugi'
+					= link_to 'Документация'
 				%li 
-					= link_to 'Documentaciya'
+					= link_to 'Новости'
 				%li 
-					= link_to 'Novosti'
+					= link_to 'Галерея'
 				%li 
-					= link_to 'Galereya'
-				%li 
-					= link_to 'Kontakti'
-				%li 
-					%span 
-						= link_to 'Ru' 
-					%span 
-						= link_to 'En'
+					= link_to 'Контакты'
+			= image_tag("header-triangle.png", :alt=>"Misc", :class => "hdr-menu-border")
 	
