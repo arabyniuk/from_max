@@ -5,13 +5,15 @@
 	= javascript_include_tag "application"
 	= csrf_meta_tags
 	%body
-		%div#parallax
-			%div{:style => "width: 1600px; height: 550px;"}
-				=image_tag("grass_1.png", :style => "position:absolute; top:0px; left:0px;" )
-			%div{:style => "width: 1600px; height: 550px;"}
-				=image_tag("grass_2.png", :style => "position:absolute; top:0px; right:0px;")
 		.main
 			.wrap
+				%div#parallax					
+					=image_tag("leaf_sml.png", :class => "leaf_sml")
+					=image_tag("leaf_big.png", :class => "leaf_big")
+					=image_tag("leaf_mid.png", :class => "leaf_mid")
+					=image_tag("bubble_sml.png", :class => "bubble_sml"  )
+					=image_tag("bubble_big.png", :class => "bubble_big" )
+					=image_tag("bubble_mid.png", :class => "bubble_mid" )
 				= render 'nav/header'
 			= yield		
 			.hFooter
