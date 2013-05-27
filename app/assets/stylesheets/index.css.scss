@@ -24,13 +24,11 @@ $footerHght: 234px;
 $wrapWidth: 965px;
 $width_2-5: 220px;
 
-html { 
-
-}
 body {
-	overflow-x: hidden;
-	color: #2d2d2d;
+	//overflow-x: hidden;
+	color: #1c3445;
 	font-family: 'PTSansRegular', sans-serif !important;
+	overflow-x: hidden;
 }
 .pull-right {
 	float: right;	
@@ -61,7 +59,7 @@ html,body {
 	height: 100%; 
 }
 .main {
-	@include bgGradient(rgb(123, 153, 177), #F5F8FA, #e6ecf1);
+	background: #f5f8fa url(bg.jpg) repeat-x;	
 	min-height: 100%;
 }
 .hFooter { 
@@ -75,19 +73,51 @@ html,body {
 }
 .redline {
 	@include setFont(PTSansRegular, 14px, #1b4d6f);
-	color:#fa9881 !important;
-	text-decoration: underline;		
+	color: #fa9881 !important;
+	text-decoration: none;		
+	border-bottom: 1px solid;
+	&:hover {
+		border-bottom: 1px solid #ff3908; 
+	} 
 	span {
 		color:#1b4d6f;
 	}
 }
 #parallax {
-	position:absolute;
 	overflow:hidden;
+	position:absolute;	
 	width:1600px;
-	height:550px;	
-	z-index: 5	
+	height:950px;	
+	z-index: 5;	
+	margin-left: -350px;
+	img {
+		position: absolute;
+	}
+	.leaf_sml {
+		margin-top: 285px;
+		margin-left: 374px;
+	}
+	.leaf_mid {
+		margin-left: 50px;
+	}
+	.leaf_big {
+		margin-top: 24px;
+		margin-left: -20px;
+	}
+	.bubble_sml { 
+		margin-top: 223px;
+		margin-left: 1230px;
+	}
+	.bubble_mid {
+		margin-top: 92px;
+		margin-left: 1234px;
+	}
+	.bubble_big {
+		margin-left: 1350px;
+	}
 }
+
+
 // *****************
 // 		HEADER
 // *****************
@@ -100,10 +130,11 @@ header {
 	h1 {
 		float: left;
 		margin-top: 13px;
+		position: relative;
 	}
-	ul {
-		background: #E6E8ED;		
-		@include bgGradient(#E6E8ED, #C7D4DF, rgb(187, 202, 230));
+	ul {			
+		// @include bgGradient(#E6E8ED, #C7D4DF, rgb(187, 202, 230));
+		background: url(main-menu-bg.jpg) repeat-x;
 		list-style: none;	
 			
 	}
@@ -117,18 +148,22 @@ header {
 		border-top: 1px solid #e0e5ea;
 		border-bottom: 1px solid #e0e5ea;
 		border-left: 1px solid #e0e5ea;;
-		padding: 10px;				
+		padding: 10px;
+		li:nth-child(1) {
+			background: none;
+		}				
 		li {
+			background: url(nav-brd.png) no-repeat;
 			display: inline-block;
 			padding: 8px 20px;
-			border-right: 1px solid #98a6b3;
+			// border-right: 1px solid #98a6b3;
 			position: relative;
 			a {
 				font-family: 'PTSansNarrowRegular', sans-serif;
 				text-decoration: none;
 				color: #1b4d6f;
 				font-size: 18px;
-				text-shadow: 1px 1px 1px #fff;
+				text-shadow: 1px 1px 0 #fff;
 				&:hover {
 					text-decoration:underline;
 				}
@@ -138,9 +173,14 @@ header {
 			border-right: none;
 		}
 	}
+	.nav-stick {
+			background: url(nav-brd-btw.png) no-repeat;
+			height: 58px;
+			margin-top: 16px;
+			width: 3px;
+	}
 	ul.hdr-lang {
-		border-radius: 0 10px 10px 0;		
-		border-left: 1px solid #98a6b3;
+		border-radius: 0 10px 10px 0;
 		border-top: 1px solid #e0e5ea;
 		border-bottom: 1px solid #e0e5ea;
 		border-right: 1px solid #e0e5ea;
@@ -173,12 +213,15 @@ header {
 section {
 	clear: left;
 }
+.wrap:nth-child(0) {
+
+}
 .wrap {
 	@include wrapper(975px);
 }
 .wrap_big {
-	@include wrapper(1600px);
-	margin-top: -100px;
+	@include wrapper(1250px);
+	margin-top: -128px;
 	.top-img-2, .top-img-3  {
 		display: none;
 	}
@@ -190,15 +233,15 @@ section {
 	z-index: 50;
 	.item-1 {
 		@include setFont(PTSansNarrowRegular, 30px, #d9e1e7);
-		text-shadow: 2px -2px 1px #91a4b4;
+		text-shadow: 1px -1px 0px #91a4b4;
 	}
 	.item-2 {
 		@include setFont(PTSansNarrowBold, 40px, #d9e1e7);
-		text-shadow: 2px -2px 1px #91a4b4;
+		text-shadow: 1px -1px 0px #91a4b4;
 		line-height: 1;
 	}
 	.item-3 {
-		@include setFont(PTSansRegular, 20px, #fff);	
+		@include setFont(PTSansRegular, 20px, #d9e1e7);	
 	}
 	[class*="item"] {
 		@include reset;
@@ -210,6 +253,8 @@ section {
 // *****************
 .nav {
 	margin-top: 20px;
+	position: relative;
+	z-index: 6;
 	.span2-5 {
 		background: url(nav-1-bg.png) no-repeat;
 		float: left;		
@@ -232,10 +277,20 @@ section {
 		height: 66px;
 		padding-top: 25px;
 		padding-bottom: 3px;
-		width: 749px;		
+		width: 749px;	
+		.span3.active {
+			p {
+				border-bottom: none !important;
+			}
+		}	
 		.span3 {
 			padding-left: 25px;
-			@include setFont(PTSansNarrowRegular, 24px, #101e2c);		
+			@include setFont(PTSansNarrowRegular, 24px, #101e2c);	
+			p {
+				border-bottom: 1px dotted #101e2c;
+				float: left;
+				margin-top: 18px;
+			}	
 		}			
 	}
 	@for $i from 1 through 3 {
@@ -256,11 +311,13 @@ section {
 // *****************
 .news {
 	margin-top: 15px;
+	position: relative;
+	z-index: 6;
 	.span3 {
 		padding-left: 22px;
 	}
 	h4 {
-		@include setFont(PTSansNarrowBold, 30px, #919ea8);
+		@include setFont(PTSansNarrowRegular, 30px, #919ea8);
 		margin-bottom: 0;
 		span {
 			font-size: 14px;
@@ -272,7 +329,8 @@ section {
 		margin-top: 7px;
 	}
 	.span3:nth-child(4) {
-		p {
+		margin-top: 35px;
+		a {
 			@include setFont(PTSansNarrowRegular, 24px, #203c50);
 			line-height: 1.2;			
 		}
@@ -280,6 +338,8 @@ section {
 }
 .news-out {
 	margin: -20px 0 80px;
+	position: relative;
+	z-index: 6;
 	a {
 		color: #1b4d6f;
 		font-size: 14px;
@@ -309,6 +369,7 @@ section {
 			&:nth-child(2) {
 				p {
 					@include setFont(PTSansNarrowRegular, 36px, #2d2d2d);
+					height: 35px;
 					margin: 6px 0 0 -60px;
 					span {
 						@include setFont(PTSansRegular, 13px, #2d2d2d);
