@@ -1,0 +1,278 @@
+// Place all the styles related to the service controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "general";
+
+.span2, .span6 {
+	margin-top: 100px;
+}
+
+// *****************
+// 		SIDEBAR
+// *****************
+
+#service_controller {
+	.main {
+		background: #dfe7ed url(service-bg.jpg) repeat-x;	
+		.wrap {
+			&:first-child {
+				.row {
+					position: fixed;
+					z-index: 100;
+				}
+			}
+		}
+	}	
+}
+%cat-ul {
+	@include reset;
+	cursor:pointer;
+	list-style: none;
+	margin: 7px 0;
+	overflow: hidden;
+	width: 233px;
+}
+%hover-active {
+	background: #cfd9e1 url(cat-list-hover.png) no-repeat 4px 17px;
+	color: #ff7800;
+	text-decoration: none;	
+}
+.span2 {
+	height: 1px;
+}
+.cat-list {
+	position: fixed;
+	h2 {
+		@include setFont(PTSansNarrowBold, 30px, #859099);
+		margin: 0;
+		padding: 0 0 0 18px;
+		width: 100px;
+		span {
+			font-size: 15px;
+		}
+	}
+	.active.height {
+		height: auto;
+		.pull-right {
+			display: block;
+		}	
+	}
+	ul {
+		li {
+			background: none;
+			clear: left;
+			img {
+				&:first-child {
+					float:left;
+					margin-top: 5px;
+				}
+			}
+			p {
+				@include setFont(PTSansNarrowRegular, 24px, #101e2c);
+				background: url(menu-hover-underline.png) repeat-x 0px 25px;
+				clear: left;
+				float: left;
+				margin: 4px 0 15px 0;
+				padding-bottom: 2px;
+				&:hover {
+					background: none;
+				}
+			}
+			line-height: 1.1;
+			padding: 16px 14px 10px 23px;
+			&:first-child {
+				height: 65px;
+			}	
+		}
+		.pull-right {
+			display: none;
+		}	
+		@extend %cat-ul;		
+		background: url(cat-list-bg.png) no-repeat;
+		border: none;
+		height: 86px;						
+	}
+	ul.active {
+			li {			
+			&:first-child {	
+				@include rounded_corners (20px 20px 0 0);							
+				background: #244159;
+				font-size: 20px;
+				text-decoration: none;					
+				p {
+					@include setFont(PTSansNarrowRegular, 24px, #101e2c);	
+					background: none;				
+					margin: 5px 0 15px 0;
+				}
+				&:hover {
+					color: #101e2c;
+					background: none;
+				}
+				.pull-right {
+					display: block;
+				}
+			}
+			&:first-child + li {
+				@include rounded_corners (15px 15px 0 0);				
+			}
+			&:last-child {
+				@include rounded_corners (0 0 15px 15px);	
+			}
+			&:hover {
+				@extend %hover-active;
+			}
+				@include setFont(PTSansNarrowRegular, 16px, #1e4a6b);
+				background: #cfd9e1;
+				cursor: pointer;
+				text-decoration: underline;				
+			}
+			.active {
+			 	@extend %hover-active;
+			}
+			@extend %cat-ul;
+			@include rounded_corners (15px);			
+			background: #244159;
+			border: 1px solid #244159;						
+	}
+}
+
+// *****************
+// 		CONTENT
+// *****************
+
+%sign {
+	background: #1d3649;
+	font: italic 24px Georgia, serif;
+	color: #dfe7ed;	
+	padding: 15px 30px;
+	position: absolute;	
+}
+.span6 {	
+	[class*="content"] {
+		clear: left;		
+	}
+	.active {
+		display: block !important;
+	}
+	[class*="content"] {	
+		h2 {
+			@include setFont(PTSansNarrowRegular, 46px, #1c3445);
+			margin: 0;
+		}
+		p {
+			color: #1c3445;
+			font-size: 13px;	
+			line-height: 1.5;				
+		}
+		.sign {
+			@extend %sign;						
+		}
+		.aside {
+			position: relative;
+		}
+		.redline {
+			float: left;
+			clear: left;
+		}	
+		padding: 23px 0 0 39px;
+	}
+	.content-1 {
+		p {
+			line-height: 1.6;
+			width: 85%;
+		}
+		.sign {
+			margin-left: -23px;
+			top: 254px;
+			width: 70%;	 
+		}
+		.aside {
+			position: relative;
+			img {
+				&:last-child {
+					margin: 97px 0 10px 33px;
+				}
+			}
+		}
+	}
+	.content-2 {
+		p {
+			&:first-child {
+				width: 89%;
+			}			
+		}
+		.span5 {
+			.sign {
+				top: 400px;
+				width: 605px;
+			}
+			img {
+				margin-top: 77px;
+			}
+		}
+		.span4-5 {
+			img {	
+				&:first-child {
+					margin-top: 20px;
+				}
+				&:first-child + img {
+					margin: 10px 40px 0 40px;
+				}
+			}			
+		}
+	}
+	.content-3 {
+		p {
+			&:first-child {
+				margin-top: 22px;
+				width: 90%;
+			}
+		}
+		.sign {
+			margin-left: -23px;
+			top: 50px; 
+		}
+		img {
+			&:first-child  {
+				float:left;
+			}
+			&:first-child + img {
+				margin: 180px 0 0 20px;
+			}				
+		}
+	}
+	.content-4 {
+		.sign {
+			top: 120px;
+			margin-left: -23px;
+		}
+		.pull-right {
+			img {
+				margin: 20px 0 0 80px;
+			}
+			margin-right: 40px;
+		}
+	}
+	.content-5 {
+		.span5 {
+			img {
+				position: absolute;
+				right: 0;
+				top: 0;
+				z-index: 20;
+			}
+		}
+		.pull-right {
+			img {
+				margin: 20px 0 0 80px;
+			}
+			margin-right: 40px;
+			margin-bottom: 20px;
+		}
+		.sign {
+			top: 400px;
+			margin-left: -23px;
+		}		
+	}
+}

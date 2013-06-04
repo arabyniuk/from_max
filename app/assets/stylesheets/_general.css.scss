@@ -1,0 +1,26 @@
+@mixin rounded_corners ($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	border-radius: $radius;
+}
+@mixin wrapper($w) {
+	margin: 0 auto;
+	width: $w;	
+}
+@mixin reset {
+	margin: 0;
+	padding: 0;
+}
+@mixin setFont($font, $size, $color) {
+	font-family: '#{$font}', sans-serif;
+	font-size: $size;
+	color: $color;
+}
+@mixin bgGradient($color1, $color2, $color3) {
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($color1), to($color2), color-stop(.6,$color3));
+	background-image: -moz-linear-gradient(19% 75% 90deg, $color1, $color2, $color3 100%); 
+}
+
+$footerHght: 234px;
+$wrapWidth: 965px;
+$width_2-5: 220px;

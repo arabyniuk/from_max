@@ -26,27 +26,32 @@
 	%section
 		.row.news
 			.span2-5
-				%h4
-					02
-					%span декабря
-				%a{ :href=> "/", :class => "redline" } 
-					%span На чемпионате Европы Украина сыграет с Англией, Францией и Швецией 02 декабря
+				%div.h-news-single
+					%h4				
+						02
+						%span декабря				
+					%a{ :href=> "/", :class => "redline" } 
+						%span На чемпионате Европы Украина сыграет с Англией, Францией и Швецией 02 декабря
 			.span3
-				%h4
-					14
-					%span мая
-				%a{ :href=> "/", :class => "redline" } 
-					%span В Москве, в концертном зале «Известия Холл» прошла долгожданная презентация легендарного бизнес седана Honda Accord 01 декабря
+				%div.h-news-single
+					%h4
+						14
+						%span мая
+					%a{ :href=> "/", :class => "redline" } 
+						%span В Москве, в концертном зале «Известия Холл» прошла долгожданная презентация легендарного бизнес седана Honda Accord 01 декабря
 			.span3
-				%h4
-					21
-					%span ноября
-				%a{ :href=> "/", :class => "redline" } 
-					%span УЕФА завел дисциплинарное дело на Луиса Адриану. Лига чемпионов 21 ноября
+				%div.h-news-single
+					%h4
+						21
+						%span ноября
+					%a{ :href=> "/", :class => "redline" } 
+						%span УЕФА завел дисциплинарное дело на Луиса Адриану. Лига чемпионов 21 ноября
 			.span3
-				= image_tag("ico_car.png", :alt=>"Misc")
-				%a{ :href=> "/", :class => "redline" } 
-					%span Спец. предложения по перевозке комбайнов
+				%div.h-news-single
+					= image_tag("ico_car.png", :alt=>"Misc")
+					%a{ :href=> "/", :class => "redline" } 
+						%span Спец. предложения по перевозке комбайнов
 		.row.news-out
-			= link_to 'Все новости'
+			%a{ :href=> "/", :class => "redline" } 
+				%span Все новости
 

@@ -1,5 +1,5 @@
 .row
-	%header	
+	%header.header	
 		%h1 		
 			%a{:href=>"/"}
 				= image_tag("logo.png", :alt=>"Misc")
@@ -10,11 +10,11 @@
 						= link_to 'Ru', '/',:class => 'ru active' 
 					%p
 						= link_to 'En', '/',:class => 'en'									
-			%div.nav-stick.pull-right
+			%div.nav-stick.pull-right			
 			%ul.hdr-menu.pull-right 
 				%li					
 					= link_to 'О компании'
-				%li 
+				%li					
 					= link_to 'Услуги'
 				%li 
 					= link_to 'Документация'

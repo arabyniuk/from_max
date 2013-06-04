@@ -1,19 +1,16 @@
 !!!
 %html(lang="en")
 	%head
+		/[if lte IE 8]
+			%script{:src => "http://html5shiv.googlecode.com/svn/trunk/html5.js"}
 	= stylesheet_link_tag    "application", :media => "all"
 	= javascript_include_tag "application"
 	= csrf_meta_tags
-	%body
+	%body{ :id => "#{params[:controller].parameterize}_controller" }
 		.main
 			.wrap
-				%div#parallax					
-					=image_tag("leaf_sml.png", :class => "leaf_sml")
-					=image_tag("leaf_big.png", :class => "leaf_big")
-					=image_tag("leaf_mid.png", :class => "leaf_mid")
-					=image_tag("bubble_sml.png", :class => "bubble_sml"  )
-					=image_tag("bubble_big.png", :class => "bubble_big" )
-					=image_tag("bubble_mid.png", :class => "bubble_mid" )
+				- if current_page?(root_path)
+					= render 'index/parallax'
 				= render 'nav/header'
 			= yield		
 			.hFooter
