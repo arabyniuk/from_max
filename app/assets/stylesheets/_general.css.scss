@@ -16,9 +16,14 @@
 	font-size: $size;
 	color: $color;
 }
-@mixin bgGradient($color1, $color2, $color3) {
-	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($color1), to($color2), color-stop(.6,$color3));
-	background-image: -moz-linear-gradient(19% 75% 90deg, $color1, $color2, $color3 100%); 
+@mixin bgGradient($image, $color1, $color2, $color3) {
+	background-color: $color1;
+	background-image: url($image), -webkit-gradient(linear, 0% 0%, 0% 100%, from($color1), to($color2), color-stop(.6,$color3));
+	background-image: url($image), -moz-linear-gradient(19% 75% 90deg, $color3, $color2, $color1 100%);
+	background-image: url($image), -o-linear-gradient(90deg,$color3 50% ,$color1 75%);
+	background-attachment:fixed;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
 }
 
 $footerHght: 234px;

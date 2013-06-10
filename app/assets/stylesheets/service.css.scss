@@ -4,26 +4,67 @@
 
 @import "general";
 
-.span2, .span6 {
-	margin-top: 100px;
+// *****************
+// 		ICONS
+// *****************
+
+%service-ico {
+	width: 80px;
+	float: left;
+	text-align: center;
+	a {	
+		@include setFont(PTSansNarrowRegular, 18px, #1e4a6b);	
+		border-bottom: 1px dashed #1e4a6b;	
+		padding-top: 82px;
+		text-align: center;		
+		text-decoration: none;
+		&:hover {
+			border: none;	
+		}
+	}
+}
+.service-ico {
+	@extend %service-ico;	
+	.content-1 & {
+		float: left;
+		margin: 95px 0 0 20px;	
+	}
+	.content-2 & {		
+		margin-left: 50px;		
+	}
+	.content-3 & {
+		margin: 185px 0 0 60px;
+	}
+}
+.content-4, .content-5 {
+	.pull-left {
+		margin: 20px 0 20px 175px;
+		.service-ico {
+			margin-left: 60px;
+		}
+	}
+
 }
 
 // *****************
 // 		SIDEBAR
 // *****************
-
+.main {
+	@include bgGradient('service-bg.png', #89a4bb, #dce4e9, #dfe7ed);
+	//background: #dfe7ed url(service-bg.jpg) no-repeat top center;	
+}
 #service_controller {
-	.main {
-		background: #dfe7ed url(service-bg.jpg) repeat-x;	
-		.wrap {
-			&:first-child {
-				.row {
-					position: fixed;
-					z-index: 100;
-				}
-			}
-		}
-	}	
+	.cat-list {
+		position: fixed;
+	}
+	.span2, .span6 {
+		margin-top: 100px;
+	}
+	.header {
+		position: fixed;
+		width: 975px;
+		z-index: 20;
+	}
 }
 %cat-ul {
 	@include reset;
@@ -32,17 +73,29 @@
 	margin: 7px 0;
 	overflow: hidden;
 	width: 233px;
+	li {
+		text-decoration: none;
+	}
+	a {		
+		border-bottom: 1px dashed #1e4a6b;
+		color: #1e4a6b;
+		text-decoration: none;
+		&:hover {
+			border-bottom: none;
+		}
+	}
 }
 %hover-active {
-	background: #cfd9e1 url(cat-list-hover.png) no-repeat 4px 17px;
-	color: #ff7800;
-	text-decoration: none;	
+	background: #cfd9e1 url(cat-list-hover.png) no-repeat 4px 17px;		
+	a {
+		color: #ff7800;
+		border-bottom: none;
+	}	
 }
 .span2 {
 	height: 1px;
 }
-.cat-list {
-	position: fixed;
+.cat-list {	
 	h2 {
 		@include setFont(PTSansNarrowBold, 30px, #859099);
 		margin: 0;
@@ -80,7 +133,7 @@
 				}
 			}
 			line-height: 1.1;
-			padding: 16px 14px 10px 23px;
+			padding: 16px 14px 5px 23px;
 			&:first-child {
 				height: 65px;
 			}	
@@ -117,15 +170,14 @@
 				@include rounded_corners (15px 15px 0 0);				
 			}
 			&:last-child {
-				@include rounded_corners (0 0 15px 15px);	
+				@include rounded_corners (0 0 15px 15px);
+				padding-bottom: 20px	
 			}
 			&:hover {
 				@extend %hover-active;
 			}
 				@include setFont(PTSansNarrowRegular, 16px, #1e4a6b);
-				background: #cfd9e1;
-				cursor: pointer;
-				text-decoration: underline;				
+				background: #cfd9e1;											
 			}
 			.active {
 			 	@extend %hover-active;
@@ -204,12 +256,13 @@
 		}
 		.span5 {
 			.sign {
-				top: 400px;
+				top: 220px;
 				width: 605px;
 			}
 			img {
 				margin-top: 77px;
 			}
+			position: relative;
 		}
 		.span4-5 {
 			img {	

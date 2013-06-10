@@ -1,0 +1,69 @@
+- content_for :scripts do
+	%script{:src => "https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"}	
+	%script{:src => "/assets/api/api.js"}
+.wrap
+	.row
+		= render 'nav/sidebar'
+		.span6	
+			%section
+				.span5-6
+					%h2 Контактная информация
+					#map
+					.h-span
+						%h3 Филиалы и дочерние компании:
+						.span2-3
+							%p 
+								%span 
+									%b Ильичевский филиал «МИКС»:
+								%span 
+									%i
+										(Внутрипортовая обработка и экспедирование грузов) 
+								%p Ильичевск 68003, Одесская обл. Бульвар Гайдара 7-Б
+								%span Тел/факс:
+								%p.tel	+38 04868 35 600
+								%p.email
+									email:
+									%a{ :href => "mailto:port@mics.com.ua" } port@mics.com.ua			
+						.span2-3
+							%p 
+								%span 
+									%b ООО «МИКС-Лайн»
+								%span 
+									%i
+										(Перевозка и обработка автомобилей и накатной техники)			
+								%p Тел/факс:
+								%p.tel	+38 04868 24 981
+								%p.email
+									email:
+									%a{ :href => "mailto:roro@mics.com.ua" } roro@mics.com.ua
+				.span2-3 
+					.address
+						%h3 ООО «МИКС»											
+						%p.adr
+							%span 
+								%b Головной офис:
+							%span Одесса 65044, 
+							%span пр-т Шевченко 4-Д,
+							%span БЦ «Шевченковский», Офис 82						
+							%span Тел/факс:
+						%p.tel						
+							+38 048 77 60 333
+						%p.tel	
+							+38 048 77 60 444
+						%p.tel
+							+38 048 77 60 555
+						%p.email 
+							email:
+							%a{ :href => "mailto:mics@mics.com.ua" } mics@mics.com.ua
+							%a{ :href => "mailto:kalinovich@mics.com.ua" } kalinovich@mics.com.ua
+						.h-span2-3
+							%p
+								%span 
+									%b ООО «МИКС-Логистик»
+								%span
+									%i (Перевозка и обработка автомобилей и накатной техники)			
+								%p Тел/факс:
+								%p.tel	+38 04868 24 981
+								%p.email
+									email:
+									%a{ :href => "mailto:roro@mics.com.ua" } roro@mics.com.ua
