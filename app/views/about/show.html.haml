@@ -3,28 +3,76 @@
 		= render 'nav/sidebar'
 		.span6
 			%h2 MICS Group profile
-			%h3 Main activies
+			%p Main activies
 			.span5-1
 				%ul
-					%li Freight forwarding (NVOCC)
-					%li Liner/commercial agency (incl husbandry services)
-					%li In-port container equipment tracing/supervision (for container lines) in Odessa/Ilyichevsk ports
-					%li In-port handling services (stuffing, warehousing, customs brokerage, lashing, pre-shipment cargo preparation and other related ops)
-					%li Heavy-lift cargo handling
-					%li Break bulk cargoes handling
-					%li Rail and truck inland haulage
-					%li Chartering
-				%h3 Higlights
+					%li 
+						%span Freight forwarding (NVOCC)
+					%li 
+						%span Liner/commercial agency (incl husbandry services)
+					%li 
+						%span In-port container equipment tracing/supervision (for container lines) in Odessa/Ilyichevsk ports
+					%li 
+						%span In-port handling services (stuffing, warehousing, customs brokerage, lashing, pre-shipment cargo preparation and other related ops)
+					%li 
+						%span Heavy-lift cargo handling
+					%li 
+						%span Break bulk cargoes handling
+					%li 
+						%span Rail and truck inland haulage
+					%li 
+						%span Chartering				
 			.span5-1
-				.service-ico
-					= image_tag("office-ico.png")		
-					%a{:href => "/"} 3 offices in Ilychevsk and Odessa
-				.service-ico
-					= image_tag("people-ico.png")		
-					%a{:href => "/"} Staff over 60 persons
-				.service-ico
-					= image_tag("cup-ico.png")		
-					%a{:href => "/"} Our awards
-				%p TEU/month in-port container equipment control for container lines (tally, supervision, executive bayplans perfomance)
-				%p Freight forwarding / liner agency services		
+				.range
+					.ico
+						= image_tag("office-ico.png")		
+						%a{:href => "/"} 3 offices in Ilychevsk and Odessa
+					.ico
+						= image_tag("people-ico.png")		
+						%a{:href => "/"} Staff over 60 persons
+					.ico
+						= image_tag("cup-ico.png")		
+						%a{:href => "/"} Our awards
+				.grf
+					%h3 5500 
+					%p 	TEU/month in-port container equipment control for container lines (tally, supervision, executive bayplans perfomance)
+				.stat
+					%h3 Freight forwarding / liner agency services
+					.stat-span
+						%p 300
+						%p TEU/month 
+						%p (containers)
+					.stat-span
+						%p 10.000
+						%p MT/month 
+						%p (bulk) 
+					.stat-span
+						%p 300
+						%p units/month 
+						%p (vehicles) 
+		.row.slide
+			%h3 Higlights
+			.slide-bg
+				= image_tag("slide.png")
+			.row
+				.span3
+					%h4 1995
+					%p Company founded in june 1995 by the three shareholders (private persons)
+				.span3
+					%h4 1995 1997
+					%p Firstirst logistic contracts with MAERSK (A.P. Moller, Denmark), SEALAND (USA), CMN Marseille (France) – container equipment tracing & survey
+				.span3
+					%h4 1998 2000
+					%p First agency agreements with MBS Marseille (France), EMES (ARKAS Group, Turkey)
+				.span3	
+					%h4 2004-2008
+					%p Foundation of NVOCC partnership with Global Link Logistics (China), BDP International (Indonesia), ABS Marseille (France), BDP India, Kartash inc. (USA), Roberto Bucci (Italy)
+		.row.logos
+			%h3 MICS’ customers (incl direct/indirect contracts)
+			= image_tag("about-logo-1.png")
+			= image_tag("about-logo-2.png")
+			= image_tag("about-logo-3.png")
+			= image_tag("about-logo-4.png")
+			%p MFC Commodities, Container Terminal Ilyichevsk, Trade House Elvas, Trade House Promshina, Metprom Ltd, Trade House Mikko, Norma Apecs, Invest-ceramica llc, Lyudinovoteplovoz, Tulachermet, MAY Company, ISC Novokramatorsk Machine Building Works, Druzhkovka Hardware Plant, Elcor Corporation, South Trade Company, Himagro and others…
+
 

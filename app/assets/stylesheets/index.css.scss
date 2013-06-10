@@ -17,6 +17,9 @@ body {
 html, body {
 	height: 100%;
 }
+h3 {
+	font-weight: normal;
+}
 .main {
 	min-height: 100%;
 }
@@ -30,13 +33,16 @@ html, body {
 	text-align: center;	
 }
 .row {
-	@include wrapper(975px);
+	@include wrapper(995px);
 	display: table;	
 }
 .row [class*="span"] {
 	float: left;
 	display: block;
 	box-sizing: border-box;
+}
+.range {
+	display: table;
 }
 .span2-5 {
 	width: $width_2-5;
@@ -54,13 +60,13 @@ html, body {
 	width: 280px;
 } 
 .span5-1 {
-	width: 350px;
+	width: 360px;
 }
 .span5 {
 	width: 385px;
 } 
 .span6 {
-	width: 715px;
+	width: 735px;
 }
 #index_controller {
 	.main {	

@@ -8,7 +8,7 @@
 // 		ICONS
 // *****************
 
-%service-ico {
+%ico {
 	width: 80px;
 	float: left;
 	text-align: center;
@@ -23,8 +23,8 @@
 		}
 	}
 }
-.service-ico {
-	@extend %service-ico;	
+.ico {
+	@extend %ico;	
 	.content-1 & {
 		float: left;
 		margin: 95px 0 0 20px;	
