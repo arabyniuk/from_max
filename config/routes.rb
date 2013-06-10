@@ -1,6 +1,9 @@
 Misc2::Application.routes.draw do
-
+ 
+  match 'about' => 'about#show'
   match 'service' => 'service#show'
+  match 'contact' => 'contact#show'
+  
   root :to => 'index#show'
 
   # The priority is based upon order of creation:

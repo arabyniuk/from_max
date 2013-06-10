@@ -12,17 +12,17 @@
 						= link_to 'En', '/',:class => 'en'									
 			%div.nav-stick.pull-right			
 			%ul.hdr-menu.pull-right 
-				%li					
-					= link_to 'О компании'
-				%li					
-					= link_to 'Услуги'
+				%li{ class: (current_page?(about_path))? 'active' : nil }						
+					= link_to 'О компании', '/about'
+				%li{ class: (current_page?(service_path))? 'active' : nil }					
+					= link_to 'Услуги', '/service'
 				%li 
 					= link_to 'Документация'
 				%li 
 					= link_to 'Новости'
 				%li 
 					= link_to 'Галерея'
-				%li 
-					= link_to 'Контакты'
+				%li{ class: (current_page?(contact_path))? 'active' : nil }	 
+					= link_to 'Контакты', '/contact'
 			= image_tag("header-triangle.png", :alt=>"Misc", :class => "hdr-menu-border")
 	

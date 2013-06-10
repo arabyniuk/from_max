@@ -4,14 +4,21 @@
 
 @import "general";
 
-html {
-	height: 100%; 
-}
 body {
-	@extend html;
 	color: #1c3445;
 	font-family: Arial, sans-serif !important;
 	overflow-x: hidden;
+}
+#map {
+	height: 300px;
+	width: 480px;
+	margin: 0;
+}
+html, body {
+	height: 100%;
+}
+.main {
+	min-height: 100%;
 }
 .pull-right {
 	float: right;	
@@ -46,15 +53,19 @@ body {
 .span4-5 {
 	width: 280px;
 } 
+.span5-1 {
+	width: 350px;
+}
 .span5 {
 	width: 385px;
 } 
 .span6 {
 	width: 715px;
 }
-.main {	
-	background: #f5f8fa url(bg.jpg) repeat-x;	
-	min-height: 100%;
+#index_controller {
+	.main {	
+		background: #f5f8fa url(bg.jpg) repeat-x;		
+	}
 }
 .hFooter { 
 	height: $footerHght; 
@@ -164,7 +175,7 @@ body {
 			}	
 		}
 		.active {
-			background: url(menu-active-bg.png) repeat-x;
+			background: url(menu-active-bg.png) repeat-x !important;
 			a {
 				color: #fff;
 				text-shadow: none;				
@@ -224,8 +235,11 @@ section {
 	@include wrapper(1250px);
 	margin-top: -128px;
 	min-height: 480px;
-	.top-img-2, .top-img-3  {
-		display: none;
+	[class*="top-img"]  {
+		display: none !important;
+	}
+	.active {
+		display: block !important;
 	}
 }
 .desc {

@@ -47,28 +47,34 @@ $ ->
 		})
 
 	$('.nav-menu .span3').hover(
-		-> 
-			idx = $(@).index()
+		->
+			index = $(@).index()
+			if !$(@).hasClass('active')
+				$('.nav-menu .span3').removeClass "active"
+				$(@).addClass('active')
+				$('[class*="top-img"]').removeClass "active"
+				fly = [1, 2, 3]
+				for d, i in fly
+					$('.nav-menu').removeClass('nav-menu-bg-'+ d)	
+				if index == 0
+					$('.nav-menu').addClass "nav-menu-bg-1"
+					$('.top-img-1').fadeIn('slow').addClass('active')
+				else if index == 1
+					$('.nav-menu').addClass "nav-menu-bg-2"
+					$('.top-img-2').fadeIn('slow').addClass('active')
+				else if index == 2
+					$('.nav-menu').addClass "nav-menu-bg-3"
+					$('.top-img-3').fadeIn('slow').addClass('active')				
+			# hover state
 			window.text = $(@).text()
 			$(@).find('p').text('Читать подробнее').css({color: '#ff3908', background: 'none', borderBottom: '1px solid #ff3908'})
-			$('[class*="top-img"]').hide()
-			$('.nav-menu .span3').removeClass "active"
-			fly = [1, 2, 3]
-			for d, i in fly
-				$('.nav-menu').removeClass('nav-menu-bg-'+ d)				
-			if idx == 0 
-				$(@).addClass('active')	
-				$('.nav-menu').addClass "hover-item-1 nav-menu-bg-1"
-				$('.top-img-1').fadeIn()
-			else if  idx == 1 
-				$(@).addClass('active')
-				$('.nav-menu').addClass "hover-item-2 nav-menu-bg-2"
-				$('.top-img-2').fadeIn()
-			else if  idx == 2
-				$(@).addClass('active')
-				$('.nav-menu').addClass "hover-item-3 nav-menu-bg-3"
-				$('.top-img-3').fadeIn()
-		-> 	
+			if index == 0
+				$('.nav-menu').addClass "hover-item-1"
+			else if index == 1
+				$('.nav-menu').addClass "hover-item-2"
+			else if index == 2
+				$('.nav-menu').addClass "hover-item-3"
+		->
 			$(@).find('p').text(text).css({
 				color: '#101e2c', 
 				borderBottom: 'none', 
@@ -79,7 +85,7 @@ $ ->
 			fly = [1, 2, 3]
 			for d, i in fly
 				$('.nav-menu').removeClass('hover-item-'+ d)
-			)	
+	)
 	
 
 

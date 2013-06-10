@@ -10,33 +10,54 @@
 						= image_tag("cat-list-ico-1.png")
 						= image_tag("cat-list-top-ico.png", :class => "pull-right")
 						%p контейнерные
-					%li.active Общая информация
-					%li Фрахтовое экспедирование
-					%li Судовое/Линейное агентирование 
-					%li Внутрипортовая перевалка
-					%li Таможенные брокерские услуги
-					%li Тальманские и сюрвейерские услуги, слежение за контейнерами
-					%li Подать заявку
+					%li.active 
+						%a{ :href => "/" } Общая информация
+					%li 
+						%a{ :href => "/" } Фрахтовое экспедирование					
+					%li 
+						%a{ :href => "/" } Судовое/Линейное агентирование 
+					%li 
+						%a{ :href => "/" } Внутрипортовая перевалка 
+					%li 
+						%a{ :href => "/" } Таможенные брокерские услуги
+					%li 
+						%a{ :href => "/" } Тальманские и сюрвейерские услуги, слежение за контейнерами
+					%li 
+						%a{ :href => "/" } Подать заявку	 
 				%ul
 					%li
 						= image_tag("cat-list-ico-2.png")
 						= image_tag("cat-list-top-ico.png", :class => "pull-right")
 						%p грузы Ро-Ро
-					%li Общая информация
-					%li Фрахтовое экспедирование
-					%li Судовое/Линейное агентирование 
-					%li Внутрипортовая перевалка
-					%li Таможенные брокерские услуги
+					%li 
+						%a{ :href => "/" } Фрахтовое экспедирование					
+					%li 
+						%a{ :href => "/" } Судовое/Линейное агентирование 
+					%li 
+						%a{ :href => "/" } Внутрипортовая перевалка 
+					%li 
+						%a{ :href => "/" } Таможенные брокерские услуги
+					%li 
+						%a{ :href => "/" } Тальманские и сюрвейерские услуги, слежение за контейнерами
+					%li 
+						%a{ :href => "/" } Подать заявку
 				%ul
 					%li
 						= image_tag("cat-list-ico-3.png")
 						= image_tag("cat-list-top-ico.png", :class => "pull-right")
 						%p навалочные грузы
-					%li Общая информация
-					%li Фрахтовое экспедирование
-					%li Судовое/Линейное агентирование 
-					%li Внутрипортовая перевалка
-					%li Таможенные брокерские услуги
+					%li 
+						%a{ :href => "/" } Фрахтовое экспедирование					
+					%li 
+						%a{ :href => "/" } Судовое/Линейное агентирование 
+					%li 
+						%a{ :href => "/" } Внутрипортовая перевалка 
+					%li 
+						%a{ :href => "/" } Таможенные брокерские услуги
+					%li 
+						%a{ :href => "/" } Тальманские и сюрвейерские услуги, слежение за контейнерами
+					%li 
+						%a{ :href => "/" } Подать заявку
 		.span6
 			.content-1
 				%section
@@ -48,7 +69,9 @@
 							= image_tag("service-content-img-1.jpg", :class => 'pull-left')
 							= image_tag("service-content-img-2.jpg")
 							%p.sign Доверьте решение своих транспортных задач специалистам
-							= image_tag("service-content-infoico.png")
+							.service-ico
+								= image_tag("info-ico.png")		
+								%a{:href => "/"} Полезная информация
 			.content-2
 				%section
 					%h2 Фрахтовое экспедирование
@@ -60,8 +83,12 @@
 							= image_tag("service-content-2-img-1.jpg", :class => 'pull-left')
 						.span4-5														
 							= image_tag("service-content-2-img-2.jpg")
-							= image_tag("service-content-infoico.png")
-							= image_tag("service-content-2-infoico.png")			
+							.service-ico
+								= image_tag("info-ico.png")		
+								%a{:href => "/"} Полезная информация
+							.service-ico
+								= image_tag("stat-ico.png")		
+								%a{:href => "/"} Любопытная статистика		
 			.content-3
 				%section
 					%h2 Внутрипортовая перевалка
@@ -69,7 +96,9 @@
 						%p Производим полный комплекс внутрипортовых услуг, включающий в себя накопление грузовых партий, складирование, предотгрузочную подготовку, ремонт и доработку грузовых мест, инспектирование, собственно грузовые операции, включая все возможные варианты приема и перевалки грузов – с/на автотранспорт и ж/д, затарку/растарку контейнеров, оформление комплекта товаросопроводительных документов и прочие специфические услуги. Проведем расчет требуемого количества контейнеров для перевозки ваших грузов, а также, при необходимости, обеспечим крепление и сепарацию груза в контейнере.
 						.aside							
 							= image_tag("service-content-3-img-1.png")
-							= image_tag("service-content-3-infoico.png")
+							.service-ico
+								= image_tag("fuckt-ico.png")		
+								%a{:href => "/"} Интересные факты
 							%p.sign Доверьте решение своих транспортных задач специалистам
 			.content-4
 				%section
@@ -78,10 +107,16 @@
 						%p Помимо стандартных таможенных формальностей, связанных с прохождением грузов через порты, предоставляем различные виды брокерских услуг – таможенная очистка грузов, следующих в импорте, экспорте и транзите, выпуск и оформление таможенных деклараций, обеспечение финансовых гарантий.
 						.aside							
 							= image_tag("service-content-4-img-1.jpg")
-							.pull-right
-								= image_tag("service-content-infoico.png")
-								= image_tag("service-content-2-infoico.png")
-								= image_tag("service-content-3-infoico.png")
+							.pull-left
+								.service-ico
+									= image_tag("info-ico.png")		
+									%a{:href => "/"} Полезная информация
+								.service-ico
+									= image_tag("stat-ico.png")		
+									%a{:href => "/"} Любобытная статистика
+								.service-ico
+									= image_tag("fuckt-ico.png")		
+									%a{:href => "/"} Интересные факты
 							%p.sign Правильное таможенное оформление груза – залог вашей безопасности
 			.content-5.active
 				%section
@@ -94,10 +129,13 @@
 						.aside	
 							= image_tag("service-content-5-img-2.jpg")
 							%p.sign Вы будете знать в любой момент времени где находится наш контейнер
-							.pull-right
-								= image_tag("service-content-infoico.png")
-								= image_tag("service-content-2-infoico.png")
-								= image_tag("service-content-history-ico.png")
-							
-
-						
+							.pull-left
+								.service-ico
+									= image_tag("info-ico.png")		
+									%a{:href => "/"} Полезная информация
+								.service-ico
+									= image_tag("stat-ico.png")		
+									%a{:href => "/"} Любобытная статистика
+								.service-ico
+									= image_tag("history-ico.png")		
+									%a{:href => "/"} Истерическая справка

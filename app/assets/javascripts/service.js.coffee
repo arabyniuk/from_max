@@ -4,7 +4,7 @@
 
 $ ->
 
-	$('.cat-list ul').find('li:first-child').click () -> 
+	$('#service_controller .cat-list ul').find('li:first-child').click () -> 
 		obj = $(@).parent()	
 		if $(@).parent().hasClass('active')
 			obj.animate({
@@ -17,7 +17,7 @@ $ ->
 			firstLi = $(@).height()			
 			obj.find('li').each () -> 
 				total += $(@).outerHeight()			
-			total = (total - firstLi) - 5
+			total = (total - firstLi) + 10
 			obj.addClass('active').animate({
 				height: total+"px"
 			}, 1000)
