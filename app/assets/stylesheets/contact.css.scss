@@ -18,15 +18,16 @@
 			@include setFont(PTSansNarrowRegular, 36px, #1c3445);
 		}
 		.span5-6 {
+			margin-left: 25px;
 			width: 480px;
 		}
 		.span2-3 {
 			.address {
 				padding-left: 25px;
 			}			
-			width: 235px;	
+			width: 230px;	
 			h3 {
-				margin: 30px 0 0 0;
+				margin: 75px 0 0 0;
 			}		
 			span {
 				clear: left;
@@ -77,7 +78,7 @@
 		}	
 	}
 	.h-span2-3 {
-		margin-top: 88px;
+		margin-top: 45px;
 		margin-bottom: 100px;		
 	}
 }
