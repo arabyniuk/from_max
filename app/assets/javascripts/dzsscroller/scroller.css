@@ -91,17 +91,18 @@
 
 /*Skin 2*/
 .scroller-con.skin_alternate .scrollbarx{
-	width: 500px;
-	height: 30px;
+	width: 61px;
+	height: 19px;
 	left: 0;
 	bottom: -30px;
-	background: yellow;
+	background: transparent url('styleimg/s3scrollerx.png');
 }
 .scroller-con.skin_alternate .scrollbarx_bg{
-	height: 30px;
+	height: 40px;
+	width: 684px;
 	left: 0;
-	bottom: -30px;
-	background: #000;
+	bottom: -22px;
+	background: transparent url('styleimg/s3scrollerx_bg2.png');	
 }
 
 .scroller-con.skin_alternate .scrollbary{
@@ -123,8 +124,8 @@
 /*Skin 3*/
 .scroller-con.skin_blackwhite .scrollbarx{
 	position: absolute;
-	width: 35px;
-	height: 10px;
+	width: 61px;
+	height: 19px;
 	left: 0;
 	top: -15px;
 	background: url('styleimg/s3scrollerx.png');
@@ -132,10 +133,10 @@
 }
 .scroller-con.skin_blackwhite .scrollbarx_bg{
 	position: absolute;
-	height: 1px;
+	height: 32px;
 	left: 0;
-	top: -10px;
-	background: #eee;
+	top: -33px;
+	background: url('styleimg/scrollbarx_bg.png') no-repeat;
 	cursor: pointer;
 }
 

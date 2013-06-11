@@ -3,6 +3,7 @@ Misc2::Application.routes.draw do
   match 'about' => 'about#show'
   match 'service' => 'service#show'
   match 'contact' => 'contact#show'
+  match 'news' => 'news#show'
   
   root :to => 'index#show'
 

@@ -1,3 +1,8 @@
+- content_for :scroll do
+	%link{:rel => "stylesheet", :href => "/assets/dzsscroller/scroller.css"}
+	%script{:src => "http://code.jquery.com/jquery-migrate-1.2.1.js"}	
+	%script{:src => "/assets/dzsscroller/scroller.js"}
+	%script{:src => "/assets/dzsscroller/init.js"}
 .wrap
 	.row
 		= render 'nav/sidebar'
@@ -52,21 +57,33 @@
 						%p (vehicles) 
 		.row.slide
 			%h3 Higlights
-			.slide-bg
-				= image_tag("slide.png")
 			.row
-				.span3
-					%h4 1995
-					%p Company founded in june 1995 by the three shareholders (private persons)
-				.span3
-					%h4 1995 1997
-					%p Firstirst logistic contracts with MAERSK (A.P. Moller, Denmark), SEALAND (USA), CMN Marseille (France) – container equipment tracing & survey
-				.span3
-					%h4 1998 2000
-					%p First agency agreements with MBS Marseille (France), EMES (ARKAS Group, Turkey)
-				.span3	
-					%h4 2004-2008
-					%p Foundation of NVOCC partnership with Global Link Logistics (China), BDP International (Indonesia), ABS Marseille (France), BDP India, Kartash inc. (USA), Roberto Bucci (Italy)
+				%div{ :id => "scrollc5", :class => "scroller-con", :style => "width: 995px; height: 155px;" }
+					%div{ :class => "inner", :style => "width: 2000px" }
+						.span3
+							%h4 1995
+							%p Company founded in june 1995 by the three shareholders (private persons)
+						.span3
+							%h4 1995 1997
+							%p Firstirst logistic contracts with MAERSK (A.P. Moller, Denmark), SEALAND (USA), CMN Marseille (France) – container equipment tracing & survey
+						.span3
+							%h4 1998 2000
+							%p First agency agreements with MBS Marseille (France), EMES (ARKAS Group, Turkey)
+						.span3	
+							%h4 2004-2008
+							%p Foundation of NVOCC partnership with Global Link Logistics (China), BDP International (Indonesia), ABS Marseille (France), BDP India, Kartash inc. (USA), Roberto Bucci (Italy)
+						.span3
+							%h4 1995
+							%p Company founded in june 1995 by the three shareholders (private persons)
+						.span3
+							%h4 1995 1997
+							%p Firstirst logistic contracts with MAERSK (A.P. Moller, Denmark), SEALAND (USA), CMN Marseille (France) – container equipment tracing & survey
+						.span3
+							%h4 1998 2000
+							%p First agency agreements with MBS Marseille (France), EMES (ARKAS Group, Turkey)
+						.span3	
+							%h4 2004-2008
+							%p Foundation of NVOCC partnership with Global Link Logistics (China), BDP International (Indonesia), ABS Marseille (France), BDP India, Kartash inc. (USA), Roberto Bucci (Italy)
 		.row.logos
 			%h3 MICS’ customers (incl direct/indirect contracts)
 			= image_tag("about-logo-1.png")

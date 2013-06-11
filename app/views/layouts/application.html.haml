@@ -5,8 +5,12 @@
 			%script{:src => "http://html5shiv.googlecode.com/svn/trunk/html5.js"}		
 	= stylesheet_link_tag    "application", :media => "all"	
 	- if current_page?(contact_path)
-		= yield :scripts
+		= yield :scripts	
 	= javascript_include_tag "application"
+	- if current_page?(about_path)
+		= yield :scroll
+	- if current_page?(news_path)
+		= yield :scroll
 	= csrf_meta_tags	
 	%body{ :id => "#{params[:controller].parameterize}_controller" }
 		.main

@@ -1,0 +1,55 @@
+// Place all the styles related to the news controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "general";
+
+.date {
+	@include setFont(PTSansNarrowRegular, 30px, #919ea8);
+	span {
+		font-size: 14px;
+	}
+}
+
+#datepicker {
+	margin-top: 470px;
+}
+
+#news_controller {
+	.span6 {
+		padding-left: 40px;		
+		h2 {
+			@include setFont(PTSansNarrowRegular, 46px, #1c3445);
+			&:first-child {
+				margin-top: 0;
+			}			
+		}
+		h3 {
+			@include setFont(PTSansNarrowRegular, 36px, #1c3445);
+			margin-top: 10px;
+		}
+		.single {
+			margin-bottom: 40px;
+			img {
+				&:first-child {
+					float: right;
+					margin-left: 10px;
+				}
+			}
+			p {
+				font-size: 13px;
+			}
+		}
+	}
+}
+
+.news {
+	.span2 {
+		padding-right: 20px;
+	}
+	.scroller {
+	margin-top: -15px;
+	}
+	margin-bottom: 40px;
+}
+

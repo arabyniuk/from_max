@@ -18,8 +18,8 @@
 					= link_to 'Услуги', '/service'
 				%li 
 					= link_to 'Документация'
-				%li 
-					= link_to 'Новости'
+				%li{ class: (current_page?(news_path))? 'active' : nil }	 
+					= link_to 'Новости', '/news'
 				%li 
 					= link_to 'Галерея'
 				%li{ class: (current_page?(contact_path))? 'active' : nil }	 
