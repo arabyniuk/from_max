@@ -206,11 +206,13 @@ h3 {
 		border-bottom: 1px solid #e0e5ea;
 		border-right: 1px solid #e0e5ea;
 		height: 56px;
-		margin-right: 23px;
-		margin-top: 22px;				
+		margin: 22px 23px 0 0;			
 		padding-left: 0;
-		p {
+		p {						
 			margin: 9px 0;
+			&:first-child + p {
+				margin: -3px 0;
+			}
 		}
 		li {
 			padding: 0 30px;
@@ -220,6 +222,7 @@ h3 {
 				@extend %upper_layout;
 				text-decoration: underline;				
 				&:hover { 
+					color: #ff3908;
 					text-decoration: none;
 				}
 			}
@@ -229,6 +232,9 @@ h3 {
 				color: #fff;	
 				padding: 3px 13px;
 				text-decoration: none;
+				&:hover {
+					color: #fff;
+				}
 			}
 		}
 	}	
@@ -237,7 +243,7 @@ section {
 	clear: left;
 }
 .wrap {
-	@include wrapper(975px);
+	@include wrapper(995px);
 }
 .wrap_big {
 	@include wrapper(1250px);
@@ -277,14 +283,15 @@ section {
 .nav {
 	margin-top: 20px;
 	position: relative;
-	z-index: 6;
+	z-index: 6;	
 	.span2-5 {
 		background: url(nav-1-bg.png) no-repeat;
 		float: left;		
 		height: 88px;
 		line-height: 1;
 		padding: 13px 0 0 18px;
-		width: 205px;
+		text-shadow: 0 1px 0 #fff;
+		width: 205px;	
 		h3 {
 			@include setFont(PTSansNarrowBold, 36px, #919ea8);
 			@include reset;
@@ -361,17 +368,17 @@ section {
 }
 .news-out {
 	.redline {
-		border-bottom: none;
+		border-bottom: 1px solid;
 	}
 	margin: -20px 0 80px;
 	position: relative;
 	z-index: 6;
-	a {
+	a {		
 		color: #1b4d6f;
 		font-size: 14px;
 		text-decoration: none;
 		&:hover { 
-			border-bottom: 1px solid;
+			border-bottom: none;
 		}
 	}
 }
@@ -387,6 +394,8 @@ section {
 			@extend %upper_layout;
 			&:first-child {
 				p {
+					line-height: 1.4;
+					margin-top: 8px;
 					width: 250px;
 				}
 				img {
@@ -424,6 +433,9 @@ section {
 				}
 			}
 			&:first-child + .span4 + .span4 {
+				.redline {
+					display: inline-block;
+				}
 				text-align: left;
 				img {
 					float: left;

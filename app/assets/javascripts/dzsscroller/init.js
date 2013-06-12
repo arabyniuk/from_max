@@ -9,6 +9,6 @@ jQuery(document).ready(function(){
 	});
 
 	$( "#datepicker" ).datepicker({
-dayNamesMin: [ "", "", "", "", "", "", "" ]
+		dayNamesMin: [ "", "", "", "", "", "", "" ]
 	});
 })

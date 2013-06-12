@@ -21,6 +21,9 @@
 			margin-left: 25px;
 			width: 480px;
 		}
+		.span5-6 > h3 {
+			margin: 68px 0 0 0;
+		}
 		.span2-3 {
 			.address {
 				padding-left: 25px;
@@ -61,24 +64,22 @@
 	}
 
 	[class*="h-span"] {
-		h3 {
-			margin-bottom: 0;
-		}
-		clear: left;		
-		padding-right: 10px;
 		span {
 			display: inline-block;
 			clear: left;
 		}
 		i, p, span, b {
 			font-size: 13px;
-		}	
-		.span2-3 {
-			padding-right: 25px;
-		}	
+		}
+		div {
+			&:first-child + div {
+				margin-left: 20px;
+				padding-right: 20px;
+			}
+		}		
 	}
 	.h-span2-3 {
-		margin-top: 45px;
+		margin-top: 80px;
 		margin-bottom: 100px;		
 	}
 }

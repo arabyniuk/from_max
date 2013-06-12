@@ -39,7 +39,7 @@
 .content-4, .content-5 {
 	.pull-left {
 		margin: 20px 0 20px 175px;
-		.service-ico {
+		.ico {
 			margin-left: 60px;
 		}
 	}
@@ -53,17 +53,9 @@
 	@include bgGradient('service-bg.png', #89a4bb, #dce4e9, #dfe7ed);
 	//background: #dfe7ed url(service-bg.jpg) no-repeat top center;	
 }
-#service_controller {
-	.cat-list {
-		position: fixed;
-	}
-	.span2, .span6 {
-		margin-top: 100px;
-	}
-	.header {
-		position: fixed;
-		width: 995px;
-		z-index: 20;
+.cat-list {
+	ul {
+		background: url(cat-list-bg-2.png) no-repeat;
 	}
 }
 %cat-ul {
@@ -98,8 +90,10 @@
 .cat-list {	
 	h2 {
 		@include setFont(PTSansNarrowBold, 30px, #859099);
+		line-height: 1;
 		margin: 0;
 		padding: 0 0 0 18px;
+		text-shadow: 0 1px 0 #fefefe;
 		width: 100px;
 		span {
 			font-size: 15px;
@@ -126,10 +120,11 @@
 				background: url(menu-hover-underline.png) repeat-x 0px 25px;
 				clear: left;
 				float: left;
-				margin: 4px 0 15px 0;
+				margin: 1px 0 15px 0;
 				padding-bottom: 2px;
 				&:hover {
 					background: none;
+					color: #ff3908;
 				}
 			}
 			line-height: 1.1;
@@ -142,7 +137,6 @@
 			display: none;
 		}	
 		@extend %cat-ul;		
-		background: url(cat-list-bg.png) no-repeat;
 		border: none;
 		height: 86px;						
 	}
@@ -184,8 +178,25 @@
 			}
 			@extend %cat-ul;
 			@include rounded_corners (15px);			
-			background: #244159;
-			border: 1px solid #244159;						
+			background: #244159 !important;
+			border: 2px solid #244159;						
+	}
+}
+
+#service_controller {
+	.cat-list {
+		position: fixed;
+		ul {
+			background: url(cat-list-bg.png) no-repeat;
+		}
+	}
+	.span2, .span6 {
+		margin-top: 100px;
+	}
+	.header {
+		position: fixed;
+		width: 995px;
+		z-index: 20;
 	}
 }
 
@@ -299,6 +310,7 @@
 		.sign {
 			top: 120px;
 			margin-left: -23px;
+			width: 530px;
 		}
 		.pull-right {
 			img {
@@ -307,13 +319,13 @@
 			margin-right: 40px;
 		}
 	}
-	.content-5 {
+	.content-5 {		
 		.span5 {
 			img {
 				position: absolute;
-				right: 0;
+				right: 35px;
 				top: 0;
-				z-index: 20;
+				z-index: 19;
 			}
 		}
 		.pull-right {
@@ -326,6 +338,7 @@
 		.sign {
 			top: 400px;
 			margin-left: -23px;
+			width: 550px;
 		}		
 	}
 }

@@ -1,5 +1,5 @@
 .ui-datepicker {
-	width: auto;
+	width: 210px;
 }
 .ui-widget-content {
 	background: none;
@@ -33,5 +33,5 @@
 	text-decoration: underline !important;
 }
 .ui-datepicker td span, .ui-datepicker td a {
-	padding: 7px;
+	padding: 7px 4px 7px 5px;
 }
