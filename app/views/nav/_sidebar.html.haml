@@ -1,24 +1,21 @@
 .span2
+	%h2.cat-title 
+		%span НАШИ
+		УСЛУГИ:
 	.cat-list
-		%h2 
-			%span НАШИ
-			УСЛУГИ:
 		%ul
 			%li				
-				= image_tag("cat-list-ico-1.png")
 				= image_tag("cat-list-top-ico.png", :class => "pull-right")
 				%p контейнерные
 		%ul
-			%li
-				= image_tag("cat-list-ico-2.png")
+			%li				
 				= image_tag("cat-list-top-ico.png", :class => "pull-right")
 				%p грузы Ро-Ро
 		%ul
-			%li
-				= image_tag("cat-list-ico-3.png")
+			%li				
 				= image_tag("cat-list-top-ico.png", :class => "pull-right")
 				%p навалочные грузы
 	- if current_page?(contact_path)			
-		%img{ :src => "assets/sample-map.jpg"}
+		#map_small
 	- if current_page?(news_path)			
 		#datepicker		

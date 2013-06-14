@@ -7,8 +7,4 @@ jQuery(document).ready(function(){
 		settings_skin:'skin_alternate',
 		settings_forcesameheight:'on'
 	});
-
-	$( "#datepicker" ).datepicker({
-		dayNamesMin: [ "", "", "", "", "", "", "" ]
-	});
 })

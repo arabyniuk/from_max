@@ -49,6 +49,9 @@
 // *****************
 // 		SIDEBAR
 // *****************
+.no-cssgradients .main {
+	background: url(bg-internal.jpg) repeat-x;
+}
 .main {
 	@include bgGradient('service-bg.png', #89a4bb, #dce4e9, #dfe7ed);
 	//background: #dfe7ed url(service-bg.jpg) no-repeat top center;	
@@ -87,18 +90,18 @@
 .span2 {
 	height: 1px;
 }
-.cat-list {	
-	h2 {
-		@include setFont(PTSansNarrowBold, 30px, #859099);
-		line-height: 1;
-		margin: 0;
-		padding: 0 0 0 18px;
-		text-shadow: 0 1px 0 #fefefe;
-		width: 100px;
-		span {
-			font-size: 15px;
-		}
+h2.cat-title {
+	@include setFont(PTSansNarrowBold, 30px, #859099);
+	line-height: 1;
+	margin: 0;
+	padding: 0 0 0 18px;
+	text-shadow: 0 1px 0 #fefefe;
+	width: 100px;
+	span {
+		font-size: 15px;
 	}
+}
+.cat-list {	
 	.active.height {
 		height: auto;
 		.pull-right {
@@ -106,31 +109,68 @@
 		}	
 	}
 	ul {
+		img {
+			&:first-child {
+				display: none;
+			}
+		}
+		&:first-child {
+			li {
+				&:first-child {
+					background: url(cat-list-ico-blue-1.png) no-repeat 27px 22px;
+					&:hover {
+						background: url(cat-list-ico-orange-1.png) no-repeat 27px 22px;
+						p {
+							background: none;								
+							color: #ff3908;
+						}						
+					}
+				}
+			}
+		}
+		&:first-child + ul {
+			li {
+				&:first-child {
+					background: url(cat-list-ico-blue-2.png) no-repeat 27px 22px;
+					&:hover {
+						background: url(cat-list-ico-orange-2.png) no-repeat 27px 22px;
+						p {
+							background: none;								
+							color: #ff3908;
+						}	
+					}
+				}
+			}
+		}
+		&:first-child + ul + ul {
+			li {
+				&:first-child {
+					background: url(cat-list-ico-blue-3.png) no-repeat 27px 22px;
+					&:hover {
+						background: url(cat-list-ico-orange-3.png) no-repeat 27px 22px;
+						p {
+							background: none;								
+							color: #ff3908;
+						}	
+					}
+				}
+			}
+		}
 		li {
 			background: none;
 			clear: left;
-			img {
-				&:first-child {
-					float:left;
-					margin-top: 5px;
-				}
-			}
 			p {
 				@include setFont(PTSansNarrowRegular, 24px, #101e2c);
 				background: url(menu-hover-underline.png) repeat-x 0px 25px;
 				clear: left;
 				float: left;
-				margin: 1px 0 15px 0;
+				margin: 23px 0 15px 0;
 				padding-bottom: 2px;
-				&:hover {
-					background: none;
-					color: #ff3908;
-				}
 			}
 			line-height: 1.1;
-			padding: 16px 14px 5px 23px;
+			padding: 16px 14px 5px 26px;
 			&:first-child {
-				height: 65px;
+				height: 65px;				
 			}	
 		}
 		.pull-right {
@@ -141,20 +181,34 @@
 		height: 86px;						
 	}
 	ul.active {
+			img {
+				&:first-child {
+					display: block;
+				}
+				&:first-child + img {
+					margin-top: -10px;
+				}
+			}
 			li {			
 			&:first-child {	
 				@include rounded_corners (20px 20px 0 0);							
-				background: #244159;
+				background-color: #244159 !important;
+				background-image: none !important;
 				font-size: 20px;
+				padding-top: 23px;
 				text-decoration: none;					
 				p {
 					@include setFont(PTSansNarrowRegular, 24px, #101e2c);	
 					background: none;				
-					margin: 5px 0 15px 0;
+					margin-top: 0;
+					text-shadow: 0 1px 0 #85b7da;
 				}
 				&:hover {
 					color: #101e2c;
 					background: none;
+					p {
+						color: #101e2c !important;
+					}
 				}
 				.pull-right {
 					display: block;
@@ -184,7 +238,11 @@
 }
 
 #service_controller {
+	h2.cat-title {
+		position: fixed;
+	}
 	.cat-list {
+		margin-top: 75px;	
 		position: fixed;
 		ul {
 			background: url(cat-list-bg.png) no-repeat;
@@ -199,6 +257,7 @@
 		z-index: 20;
 	}
 }
+
 
 // *****************
 // 		CONTENT
@@ -238,7 +297,9 @@
 			float: left;
 			clear: left;
 		}	
+		display: table;
 		padding: 23px 0 0 39px;
+		margin-bottom: 80px;
 	}
 	.content-1 {
 		p {

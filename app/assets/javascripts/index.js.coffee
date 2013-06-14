@@ -7,38 +7,86 @@ $ ->
 	if $('#parallax').length > 0
 		$('#parallax').zlayer([
 			{
-				layer:'.leaf_sml',
-				mass:60,
-				force:'pull',
-				confine:'y'
-			},
-			{
-				layer:'.leaf_mid',
-				mass:20,
-				force:'pull',
-				confine:'y'
-			},
-			{
-				layer:'.leaf_big',
+				layer:'.leaf-1',
 				mass:5,
 				force:'pull',
 				confine:'y'
 			},
 			{
-				layer:'.bubble_sml',
+				layer:'.leaf-2',
+				mass:10,
+				force:'pull',
+				confine:'y'
+			},
+			{
+				layer:'.leaf-3',
+				mass:30,
+				force:'pull',
+				confine:'y'
+			},
+			{
+				layer:'.leaf-4',
+				mass:40,
+				force:'pull',
+				confine:'y'
+			},
+			{
+				layer:'.leaf-5',
+				mass:50,
+				force:'pull',
+				confine:'y'
+			},
+			{
+				layer:'.leaf-6',
 				mass:60,
 				force:'pull',
 				confine:'y'
 			},
 			{
-				layer:'.bubble_mid',
+				layer:'.bubble-1',
+				mass:5,
+				force:'pull',
+				confine:'y'
+			},
+			{
+				layer:'.bubble-2',
+				mass:5,
+				force:'pull',
+				confine:'y'
+			},
+			{
+				layer:'.bubble-3',
+				mass:10,
+				force:'pull',
+				confine:'y'
+			},
+			{
+				layer:'.bubble-4',
 				mass:20,
 				force:'pull',
 				confine:'y'
 			},
 			{
-				layer:'.bubble_big',
-				mass:5,
+				layer:'.bubble-5',
+				mass:30,
+				force:'pull',
+				confine:'y'
+			},
+			{
+				layer:'.bubble-6',
+				mass:40,
+				force:'pull',
+				confine:'y'
+			},
+			{
+				layer:'.bubble-7',
+				mass:50,
+				force:'pull',
+				confine:'y'
+			},
+			{
+				layer:'.bubble-8',
+				mass:60,
 				force:'pull',
 				confine:'y'
 			}

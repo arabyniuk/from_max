@@ -4,6 +4,16 @@
 
 @import "general";
 
+#map {
+	height: 300px;
+	width: 480px;
+	margin: 0;
+}
+#map_small {
+	margin-top: 155px;
+	height: 180px;
+	width: 260px;
+}
 #contact_controller {
 	.span2 > img {
 		margin-top: 110px;
@@ -74,7 +84,9 @@
 		div {
 			&:first-child + div {
 				margin-left: 20px;
-				padding-right: 20px;
+				p {
+					padding-right: 16px;
+				}				
 			}
 		}		
 	}

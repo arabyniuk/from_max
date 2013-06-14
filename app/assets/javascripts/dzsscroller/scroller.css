@@ -102,7 +102,7 @@
 	width: 684px;
 	left: 0;
 	bottom: -22px;
-	background: transparent url('styleimg/s3scrollerx_bg2.png');	
+	background: transparent url('styleimg/s3scrollerx_bg2.png') no-repeat;	
 }
 
 .scroller-con.skin_alternate .scrollbary{

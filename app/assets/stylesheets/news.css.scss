@@ -14,10 +14,11 @@
 #datepicker {
 	margin-top: 470px;
 }
-
 #news_controller {
-	.span6 {
-		padding-left: 40px;		
+	.span6 {		
+		.h-span6 {
+			padding-left: 40px;
+		}			
 		h2 {
 			@include setFont(PTSansNarrowRegular, 46px, #1c3445);
 			&:first-child {
@@ -47,15 +48,19 @@
 			}
 		}
 	}
+	.news {
+		.span2 {
+			.h-span {
+				padding-right: 20px;
+			}
+			width: 240px;
+		}
+		.scroller {
+		margin-top: -15px;
+		}
+		margin-bottom: 140px;
+		margin-left: 40px;
+	}
 }
 
-.news {
-	.span2 {
-		padding-right: 20px;
-	}
-	.scroller {
-	margin-top: -15px;
-	}
-	margin-bottom: 140px;
-}
 
