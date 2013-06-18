@@ -134,6 +134,8 @@ $ ->
 			for d, i in fly
 				$('.nav-menu').removeClass('hover-item-'+ d)
 	)
+
+	$('.hdr-lang span a').parent().css({ 'background' : 'none' })
 	
 
 

@@ -1,11 +1,20 @@
 Misc2::Application.routes.draw do
- 
-  match 'about' => 'about#show'
-  match 'service' => 'service#show'
-  match 'contact' => 'contact#show'
-  match 'news' => 'news#show'
-  
-  root :to => 'index#show'
+
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
+
+  scope ":locale", locale: /en|ru/ do
+    match 'about' => 'about#show'
+    match 'service' => 'service#show'
+    match 'contact' => 'contact#show'
+    match 'news' => 'news#show'
+
+    root :to => 'index#show' 
+  end
+
+  match '*path', to: redirect("/#{I18n.default_locale}/%path")
+  match '', to: redirect("/#{I18n.default_locale}")
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

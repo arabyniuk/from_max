@@ -43,3 +43,5 @@ end
 
 # To use debugger
 # gem 'debugger'
+
+gem "activeadmin-globalize3"

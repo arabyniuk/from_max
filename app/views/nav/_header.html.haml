@@ -6,23 +6,23 @@
 		%nav.nvg
 			%ul.hdr-lang.pull-right 
 				%li
-					%p
-						= link_to 'Ru', '/',:class => 'ru active' 
-					%p
-						= link_to 'En', '/',:class => 'en'									
+					%span
+						=link_to_unless_current "Ru", locale: "ru"
+					%span
+						=link_to_unless_current "En", locale: "en"							
 			%div.nav-stick.pull-right			
 			%ul.hdr-menu.pull-right 
 				%li{ class: (current_page?(about_path))? 'active' : nil }						
-					= link_to 'О компании', '/about'
+					= link_to "#{t "nav.about"}", about_path
 				%li{ class: (current_page?(service_path))? 'active' : nil }					
-					= link_to 'Услуги', '/service'
+					= link_to 'Услуги', service_path
 				%li 
 					= link_to 'Документация'
 				%li{ class: (current_page?(news_path))? 'active' : nil }	 
-					= link_to 'Новости', '/news'
+					= link_to 'Новости', news_path
 				%li 
 					= link_to 'Галерея'
 				%li{ class: (current_page?(contact_path))? 'active' : nil }	 
-					= link_to 'Контакты', '/contact'
+					= link_to 'Контакты', contact_path 
 			= image_tag("header-triangle.png", :alt=>"Misc", :class => "hdr-menu-border")
 	

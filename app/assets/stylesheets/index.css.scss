@@ -200,7 +200,7 @@ h2, h3 {
 	    margin-top: 68px;
 	    float: right;
 	}
-	ul.hdr-menu {
+	.hdr-menu {
 		@include rounded_corners(10px 0 0 0);
 		border-top: 1px solid #e0e5ea;
 		border-bottom: 1px solid #e0e5ea;
@@ -257,7 +257,7 @@ h2, h3 {
 			margin-top: 22px;
 			width: 3px;
 	}
-	ul.hdr-lang {
+	.hdr-lang {
 		@include rounded_corners(0 10px 10px 0);
 		border-top: 1px solid #e0e5ea;
 		border-bottom: 1px solid #e0e5ea;
@@ -265,33 +265,37 @@ h2, h3 {
 		height: 56px;
 		margin: 22px 23px 0 0;			
 		padding-left: 0;
-		p {						
-			margin: 9px 0;
-			&:first-child + p {
+		span {
+			@include setFont(PTSansNarrowRegular, 16px, #2f5d7c);
+			@include rounded_corners(9px);
+			background: #274861;			
+			display: block;
+			color: #fff;
+			clear: left;						
+			margin: 4px 0;				
+			padding: 3px 13px;
+			text-decoration: none;
+			&:hover {
+				color: #fff;
+			}
+			&:first-child + span {
 				margin: -3px 0;
 			}
-		}
-		li {
-			padding: 0 30px;
-			text-align: center;
-			a {
-				@include setFont(PTSansNarrowRegular, 16px, #2f5d7c);
+			a {				
 				@extend %upper_layout;
+				color: #2f5d7c;
 				text-decoration: underline;				
 				&:hover { 
 					color: #ff3908;
 					text-decoration: none;
 				}
 			}
+		}
+		li {
+			padding: 0 30px;
+			text-align: center;
 			.active {							
-				background: #274861;
-				@include rounded_corners(9px);
-				color: #fff;	
-				padding: 3px 13px;
-				text-decoration: none;
-				&:hover {
-					color: #fff;
-				}
+
 			}
 		}
 	}	
