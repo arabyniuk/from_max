@@ -45,3 +45,6 @@ end
 # gem 'debugger'
 
 gem "activeadmin-globalize3"
+gem 'carrierwave'
+gem "rmagick"
+gem "ckeditor"

@@ -15,16 +15,29 @@
 			.h-span6
 				%h2 Новости
 				%h3 
-					=@new.title
+					=@news.last.title
 				%div.date
-					=@new.created_at.day
+					=@news.last.created_at.day
 					%span						
-						=I18n.l @new.created_at, :format => :custom
+						=I18n.l @news.last.created_at, :format => :custom
 				%div.single
-					=image_tag @new.image_url(:thumb).to_s
-					%div
-						=@new.content.html_safe
-
-											
+					=image_tag @news.last.image_url(:thumb).to_s
+					%div 
+						=@news.last.content.html_safe
+			.news
+				%h3 Все новости				
+				%div{ :id => "scrollc4", :class => "scroller-con", :style => "width: 700px; height: 150px;" }
+					%div{ :class => "inner", :style => "width: 1250px; height: 150px;" }		
+						- @news.each do |new|	
+							.span2	
+								.h-span
+									%div.date
+										=new.created_at.day 
+										%span 
+											=I18n.l new.created_at, :format => :custom	
+									.h-redline	
+										= link_to new do
+											<span>#{new.title}</span>
+												
 									
 						

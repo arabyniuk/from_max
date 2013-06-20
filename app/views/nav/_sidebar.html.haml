@@ -15,7 +15,7 @@
 			%li				
 				= image_tag("cat-list-top-ico.png", :class => "pull-right")
 				%p навалочные грузы
-	- if current_page?(contact_path)			
+	-if current_page?(url_for(:controller => 'contact', :action => 'show'))		
 		#map_small
-	- if current_page?(news_path)			
+	-if current_page?(:controller => 'news')			
 		#datepicker		

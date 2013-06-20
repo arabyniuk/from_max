@@ -28,6 +28,7 @@
 		}
 		h3 {
 			@include setFont(PTSansNarrowRegular, 36px, #1c3445);
+			display: inline-block;
 			margin-top: 10px;
 			margin-bottom: 16px;
 		}
@@ -41,7 +42,7 @@
 					margin-bottom: 30px;
 				}
 			}
-			p {				
+			div {				
 				color: #1c3445;
 				font-size: 13px;
 				line-height: 1.5;
@@ -60,6 +61,7 @@
 		}
 		margin-bottom: 140px;
 		margin-left: 40px;
+		float: left;
 	}
 }
 
